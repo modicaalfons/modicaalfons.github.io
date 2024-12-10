@@ -1,0 +1,360 @@
+/* Grundinställningar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Huvudheader för kategorier (översta menyn) */
+#kategorier {
+    display: flex; /* Flex för horisontell layout */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgb(243, 248, 253);
+}
+
+/* Flex-inställningar för vänstra menydelar (Departments och Services) */
+.left-items {
+    display: flex;
+    gap: 20px; /* Mellanrum mellan "Departments" och "Services" */
+}
+
+/* Styling för individuella menyelement som "Departments" och "Services" */
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Mellanrum mellan text och ikoner */
+}
+
+.menu-item img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Flex-inställningar för högra menydelar (Deals, Grocery osv.) */
+.right-items {
+    display: flex;
+    gap: 15px; /* Mellanrum mellan länkarna */
+    list-style: none; /* Tar bort punktlistestil */
+}
+
+.right-items li a {
+    color: rgb(13, 29, 83);
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.right-items li a:hover {
+    color: #ff9900; /* Färg på hover */
+}
+
+/* Huvudheader - Sök och kontohantering */
+/* Huvudheader - Sök och kontohantering */
+/* Huvudheader - Sök och kontohantering */
+#meny {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #131A22; /* Mörkblå färg för bakgrunden */
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Logotypsektionen */
+.logo-section {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.logo-section h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.logo-section p {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+/* Söksektion */
+.search-section {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 600px;
+}
+
+.category-select {
+    padding: 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-section input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.search-button {
+    background-color: #febd69;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.search-button img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Konto- och listsektion */
+.account-section {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.account-section p:first-child {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.account-section p:last-child {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Orderssektion */
+.orders-section {
+    margin-right: 20px;
+    font-size: 0.9rem;
+}
+
+/* Kundvagn */
+.cart-section {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.cart-section img {
+    width: 64px;
+    margin-right: 5px;
+}
+
+/* Sidomeny */
+aside {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    position: absolute;
+    top: 140px; 
+    right: 0; 
+    text-align: center;
+}
+
+aside ul {
+    list-style: none;
+    line-height: 2;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+/* Produktsektion */
+.product-section {
+    flex: 1;
+    margin-right: auto;
+
+}
+
+/* Produkt-raden */
+.product-row {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    width: 100%;
+    padding:  0;
+    
+}
+
+/* Produktkort */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.product-card button {
+    background-color: rgb(187, 39, 26);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+    background-color: rgb(150, 30, 20);
+}
+
+/* Reklamsektion (Back to business) */
+.advertisement {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: #6b6e71;
+    border-radius: 8px;
+    padding: 20px;
+    gap: 20px;
+    color: white;
+    margin-top: 20px;
+}
+
+.advertisement .ad-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.advertisement .ad-content p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.advertisement .ad-content a {
+    color: #f2f2f2;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.advertisement .ad-content a:hover {
+    text-decoration: underline;
+}
+
+.advertisement .ad-image img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Promotions-sektionen */
+.promotions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Enskilda promotion-kort */
+.promo-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    height: 300px;
+}
+
+.promo-card img {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.promo-card h2 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.promo-card button {
+    background-color: rgb(187, 39, 26);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    transition: background-color 0.3s;
+}
+
+.promo-card button:hover {
+    background-color: rgb(150, 30, 20);
+}
+
+/* Footer */
+footer {
+    background-color: #232f3e;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #ff9900;
+}
